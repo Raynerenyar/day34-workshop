@@ -1,0 +1,18 @@
+<form [formGroup]="inputForm" (ngSubmit)="submit()">
+    <table>
+        <tr>
+            <td>
+                City:
+                <select formControlName="city">
+                    <ng-container *ngFor="let city of ARR_OF_CITIES">
+                        <option [ngValue]="city">{{ city | titlecase }}</option>
+                    </ng-container>
+                </select>
+                <!-- <input type="text" placeholder="Please input city" formControlName="city"> -->
+            </td>
+            <td>
+                <button type="submit">Get</button>
+            </td>
+        </tr>
+    </table>
+</form>

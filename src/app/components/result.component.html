@@ -1,0 +1,21 @@
+<ng-container *ngIf="weather">
+    <p style="text-align: center;">The weather of {{weather.name}}</p>
+    <div style="display: grid;justify-content: center;">
+        <span class="container">
+            <div class="fixed">
+                <img src="https://openweathermap.org/img/wn/{{ weather.icon }}@2x.png" alt="">
+            </div>
+            <div class="flex-item">
+                <div>
+                    Country: {{weather.country}}
+                </div>
+                <div>
+                    Description: {{weather.description}}
+                </div>
+                <div>
+                    City: {{weather.name}}
+                </div>
+            </div>
+        </span>
+    </div>
+</ng-container>
